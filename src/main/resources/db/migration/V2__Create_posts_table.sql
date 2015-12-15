@@ -1,0 +1,8 @@
+CREATE TABLE "posts" (
+  "id"      BIGSERIAL PRIMARY KEY,
+  "user_id" BIGINT NOT NULL,
+  "title" VARCHAR(254) NOT NULL,
+  "content" TEXT NOT NULL
+);
+
+ALTER TABLE "posts" ADD CONSTRAINT "user_fk" FOREIGN KEY ("user_id") REFERENCES "users" ("id") ON UPDATE NO ACTION ON DELETE CASCADE;

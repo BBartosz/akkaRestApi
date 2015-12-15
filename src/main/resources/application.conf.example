@@ -1,0 +1,11 @@
+akka {
+  loglevel = WARNING
+}
+
+database = {
+  url = "jdbc:postgresql://127.0.0.1/yourdbname"
+  user = "youruser"
+  password = "yourpassword"
+  driver = org.postgresql.Driver
+  keepAliveConnection = true
+}
